@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:petperfect/presentation/features/screen2/bloc/dummy_list_bloc.dart';
+
+import '../bloc/dummy_list_bloc.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: _DummyList(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Second Screen',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
+      body: const _DummyList(),
     );
   }
 }
